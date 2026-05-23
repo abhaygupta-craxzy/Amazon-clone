@@ -670,7 +670,7 @@ footer {
   }
   .hero {
     grid-template-columns: 1fr;
-    padding: 100px 10px 10px 10px;
+    padding: 55px 10px 10px 10px;
     gap: 16px;
   }
   .shop {
@@ -683,14 +683,14 @@ footer {
     padding: 15px;
   }
   .hero-image {
-    height: 150px;
+    height: 200px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 42% center;
     background-color: #fcd5e2;
   }
   .hero::after {
-    top: 60px;
+    top: 30px;
     height: 90px;
   }
   .scroll-box {
