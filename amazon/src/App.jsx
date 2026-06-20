@@ -5,7 +5,7 @@ import ProductGrid from './components/ProductGrid';
 import ProductScroller from './components/ProductScroller';
 import Footer from './components/Footer';
 
-// Import datasets
+
 import {
   revampHomeItems,
   bulkOrderItems,

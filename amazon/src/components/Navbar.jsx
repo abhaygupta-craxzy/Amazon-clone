@@ -1,5 +1,3 @@
-
-
 const Navbar = () => {
   return (
     <div className="navbar">
@@ -15,7 +13,7 @@ const Navbar = () => {
         <p className="nav-addr-first">Deliver to Abhay</p>
         <div className="add-icon">
           <i className="fa-solid fa-location-dot"></i>
-          <p className="nav-addr-second">Delhi,India,209732</p>
+          <p className="nav-addr-second">Delhi,India,201001</p>
         </div>
       </div>
 
@@ -23,7 +21,11 @@ const Navbar = () => {
         <select className="search" aria-label="Select search category">
           <option>All</option>
         </select>
-        <input type="text" className="search-box" placeholder="Search Amazon.in" />
+        <input
+          type="text"
+          className="search-box"
+          placeholder="Search Amazon.in"
+        />
         <button className="search-btn">
           <i className="fa-solid fa-magnifying-glass"></i>
         </button>
@@ -61,8 +63,16 @@ const Navbar = () => {
       </div>
 
       <div className="cart border">
-        <i className="fa-solid fa-cart-arrow-down"></i>
-        <span>Cart</span>
+        <a
+          href="https://www.amazon.in/gp/cart/view.html?ref_=nav_cart"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cart border"
+        >
+          <i className="fa-solid fa-cart-arrow-down"></i>
+
+          {/* <span>Cart</span> */}
+        </a>
       </div>
     </div>
   );

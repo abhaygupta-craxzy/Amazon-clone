@@ -1,14 +1,21 @@
-
-const ProductGrid = ({ title, items, linkText = 'See more', linkUrl = '#', isTop = false }) => {
+const ProductGrid = ({
+  title,
+  items,
+  linkText = "See more",
+  linkUrl = "#",
+  isTop = false,
+}) => {
   return (
-    <div className={`box ${isTop ? 'top' : ''}`}>
+    <div className={`box ${isTop ? "top" : ""}`}>
       <div className="box-content">
         <h2>{title}</h2>
         <div className="box-img-grid">
           {items.map((item, index) => (
             <div className="grid-item" key={index}>
-              <img src={item.img} alt={item.alt || item.label} />
-              <span>{item.label}</span>
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
+                <img src={item.img} alt={item.alt || item.label} />
+              </a>
+                <span>{item.label}</span>
             </div>
           ))}
         </div>
