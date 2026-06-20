@@ -1,4 +1,17 @@
+import { useState } from "react";
+
 const Navbar = () => {
+   const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearch = () => {
+    if (!searchTerm.trim()) return;
+
+    window.open(
+      `https://www.amazon.in/s?k=${encodeURIComponent(searchTerm)}`,
+      "_blank"
+    );
+  };
+  
   return (
     <div className="navbar">
       <div className="nav-menu-mobile">
@@ -25,8 +38,15 @@ const Navbar = () => {
           type="text"
           className="search-box"
           placeholder="Search Amazon.in"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              handleSearch();
+            }
+          }}
         />
-        <button className="search-btn">
+        <button className="search-btn" onClick={handleSearch}>
           <i className="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
