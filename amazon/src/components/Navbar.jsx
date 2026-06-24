@@ -6,10 +6,7 @@ const Navbar = () => {
   const handleSearch = () => {
     if (!searchTerm.trim()) return;
 
-    window.open(
-      `https://www.amazon.in/s?k=${encodeURIComponent(searchTerm)}`,
-      "_blank"
-    );
+   window.location.href = `https://www.amazon.in/s?k=${encodeURIComponent(searchTerm)}`;
   };
   
   return (
@@ -85,7 +82,7 @@ const Navbar = () => {
       <div className="cart border">
         <a
           href="https://www.amazon.in/gp/cart/view.html?ref_=nav_cart"
-          target="_blank"
+          target="_self"
           rel="noopener noreferrer"
           className="cart border"
         >

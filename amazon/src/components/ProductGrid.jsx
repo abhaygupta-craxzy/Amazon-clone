@@ -12,7 +12,7 @@ const ProductGrid = ({
         <div className="box-img-grid">
           {items.map((item, index) => (
             <div className="grid-item" key={index}>
-              <a href={item.link} target="_blank" rel="noopener noreferrer">
+              <a href={item.link} target="_self">
                 <img src={item.img} alt={item.alt || item.label} />
               </a>
                 <span>{item.label}</span>

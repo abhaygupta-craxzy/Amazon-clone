@@ -12,7 +12,7 @@ const ProductScroller = ({ title, items }) => {
           const imgAlt = item.alt || "";
           return (
             <div className="scroll-item" key={index}>
-              <a href={item.link} target="_blank" rel="noopener noreferrer">
+              <a href={item.link} target="_self" rel="">
                 <img src={imgSrc} alt={imgAlt} loading="lazy" />
               </a>
             </div>
